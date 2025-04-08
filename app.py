@@ -4,6 +4,9 @@ from PIL import Image
 import io
 import qrcode
 import numpy as np
+import cv2
+
+
 
 def app():
     st.title("QR Code Generator and Decoder")
@@ -42,6 +45,6 @@ def app():
             st.success(f"Decoded QR Code Text: {value}")
         else:
             st.error("Could not decode the QR code.")
-
+print(cv2.__version__)
 if __name__ == "__main__":
     app()
